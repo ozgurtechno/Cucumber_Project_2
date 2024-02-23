@@ -1,6 +1,5 @@
-package Utilities;
+package utilities;
 
-import Pages.Parent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -9,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class GenelWebDriver {
+public class BaseDriver {
     public static WebDriver driver;
 
     public static WebDriver getDriver() {
@@ -28,8 +27,6 @@ public class GenelWebDriver {
     }
 
     public static void quitDriver() {
-        Parent.delay(5);
-
         if (driver != null) {
             driver.quit();
             driver = null;

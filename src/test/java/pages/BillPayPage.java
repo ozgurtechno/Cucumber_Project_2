@@ -1,14 +1,13 @@
-package Pages;
+package pages;
 
-
-import Utilities.GenelWebDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BillPayPage extends Parent {
     public BillPayPage() {
-        PageFactory.initElements(GenelWebDriver.getDriver(), this);
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(css = "div[id=\"leftPanel\"] li:nth-of-type(4)")

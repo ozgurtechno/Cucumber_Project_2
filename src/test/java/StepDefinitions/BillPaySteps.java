@@ -1,16 +1,14 @@
 package StepDefinitions;
 
 
-import Pages.BillPayPage;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import pages.BillPayPage;
+import io.cucumber.java.en.*;
 
 public class BillPaySteps {
 
     BillPayPage billPayPage = new BillPayPage();
 
-    @And("Click to Bill Pay button")
+    @When("Click to Bill Pay button")
     public void clickToBillPayButton() {
         billPayPage.findAndClick("billPayBtn");
 

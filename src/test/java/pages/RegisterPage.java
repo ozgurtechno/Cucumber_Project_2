@@ -1,6 +1,6 @@
-package Pages;
+package pages;
 
-import Utilities.GenelWebDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class RegisterPage extends Parent {
 
     public RegisterPage() {
-        PageFactory.initElements(GenelWebDriver.getDriver(), this);
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(xpath = "//a[text()=\"Register\"]")
@@ -39,13 +39,13 @@ public class RegisterPage extends Parent {
     private WebElement ssn;
 
     @FindBy(id = "customer.username")
-    private WebElement userName;
+    private WebElement customerUsername;
 
     @FindBy(id = "customer.password")
-    private WebElement password;
+    private WebElement customerPassword;
 
     @FindBy(id = "repeatedPassword")
-    private WebElement passwordConfirm;
+    private WebElement customerPasswordConfirm;
 
     @FindBy(css = "input[value=\"Register\"]")
     private WebElement registerBtn;
@@ -82,14 +82,14 @@ public class RegisterPage extends Parent {
             case "phoneNumber":
                 myElement = phoneNumber;
                 break;
-            case "userName":
-                myElement = userName;
+            case "customerUsername":
+                myElement = customerUsername;
                 break;
-            case "password":
-                myElement = password;
+            case "customerPassword":
+                myElement = customerPassword;
                 break;
-            case "passwordConfirm":
-                myElement = passwordConfirm;
+            case "customerPasswordConfirm":
+                myElement = customerPasswordConfirm;
                 break;
 
         }

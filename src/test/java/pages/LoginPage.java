@@ -1,7 +1,7 @@
-package Pages;
+package pages;
 
 
-import Utilities.GenelWebDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,8 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends Parent {
 
     public LoginPage() {
-
-        PageFactory.initElements(GenelWebDriver.getDriver(), this);
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(css = "[name=\"username\"]")
@@ -56,7 +55,6 @@ public class LoginPage extends Parent {
             case "LogOutBtn":
                 myElement = LogOutBtn;
                 break;
-
         }
 
         clickFunction(myElement);
